@@ -1,23 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
+import { fetchGet } from './api/nasa-neo';
 import './App.scss';
 
-function App() {
+const App = () => {
+  const [neo, setNeo] = useState('');
+
+  const getNeo = async () => {
+    const neoName = await fetchGet('/neo/3542519', {});
+    setNeo(neoName.name);
+  }
+
+  getNeo();
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          {neo}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
