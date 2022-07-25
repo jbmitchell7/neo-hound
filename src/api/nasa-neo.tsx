@@ -14,7 +14,7 @@ const neoFetch = async (url: String, method = 'GET', payload = {}) => {
         const options = {
             headers,
             method,
-            url: `${API_URL}${url}?api_key=${apiKey}`,
+            url: `${API_URL}${url}api_key=${apiKey}`,
             data: payload,
         }
 
