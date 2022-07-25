@@ -1,19 +1,25 @@
+@use './styles/colors';
+
 .App {
-  text-align: center;
+  background-color: colors.$bg-black;
+  padding: 30px 30px;
+  height: 100vh;
+  color: colors.$gold;
+  font-size: large;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+// @media (prefers-reduced-motion: no-preference) {
+//   .App-logo {
+//     animation: App-logo-spin infinite 20s linear;
+//   }
+// }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
 
-  to {
-    transform: rotate(360deg);
-  }
-}
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }

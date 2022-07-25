@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+
 import AsteroidView from './views/AsteroidView/AsteroidView';
 import './App.scss';
 
