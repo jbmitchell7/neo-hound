@@ -10,7 +10,7 @@ const AsteroidCard = (props: { asteroid: Neo }) => {
     let asteroidWidth = asteroid.estimated_diameter.feet.estimated_diameter_max * .2;
 
     return (
-        <div key={asteroid.id} className='asteroid'>
+        <div className='asteroid'>
             <div className='asteroid-image' style={{ width: asteroidWidth + 'px' }}>
                 <Asteroid randomColor={randomColor} />
             </div>

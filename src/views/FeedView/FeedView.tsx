@@ -28,7 +28,7 @@ const FeedView = () => {
         <div className='feed'>
             <h2>Passing by Today</h2>
             {weeklyAsteroids.map(a => (
-                <AsteroidCard asteroid={a} />
+                <AsteroidCard asteroid={a} key={a.id} />
             ))}
         </div>
     )
