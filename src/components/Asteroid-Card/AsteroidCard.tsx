@@ -6,12 +6,13 @@ import './AsteroidCard.scss';
 const AsteroidCard = (props: { asteroid: Neo }) => {
     const { asteroid } = props;
 
+    let randomColor = "#000000".replace(/0/g, () => { return (~~(Math.random() * 16)).toString(16); });
     let asteroidWidth = asteroid.estimated_diameter.feet.estimated_diameter_max * .2;
 
     return (
         <div key={asteroid.id} className='asteroid'>
             <div className='asteroid-image' style={{ width: asteroidWidth + 'px' }}>
-                <Asteroid />
+                <Asteroid randomColor={randomColor} />
             </div>
             <div>
                 <p>{asteroid.name}</p>
