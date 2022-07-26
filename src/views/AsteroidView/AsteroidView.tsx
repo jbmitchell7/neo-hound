@@ -1,11 +1,18 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './AsteroidView.scss';
 
 const AsteroidView = () => {
     const [asteroidName, setAsteroidName] = useState('asteroid-view');
 
     return (
-        <div>{asteroidName}</div>
+        <>
+            <p>{asteroidName}</p>
+            <Link to='/'>
+                <button>Back to Feed</button>
+            </Link>
+        </>
+
     )
 }
 

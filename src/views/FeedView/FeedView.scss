@@ -1,5 +1,15 @@
 @use '../../styles/fonts.scss';
 
+h2 {
+    font-family: fonts.$title;
+}
+
 p {
     font-family: fonts.$paragraph;
+}
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { fetchGet } from '../../api/nasa-neo';
 import { Feed, Neo } from '../../data/types';
@@ -26,17 +27,22 @@ const FeedView = () => {
     }
 
     return (
-        <>
+        <div className='feed'>
             <button onClick={getToday}>Click Me</button>
+            <h2>Passing by Today</h2>
             {weeklyAsteroids.map(a => (
                 <div key={a.id}>
                     <p>{a.name}</p>
-                    <p>Relative Velocity to Earth {a.close_approach_data[0].relative_velocity.miles_per_hour}mph</p>
+                    <p>Relative Velocity to Earth: {a.close_approach_data[0].relative_velocity.miles_per_hour}mph</p>
                     <p>Max Estimated Diameter: {a.estimated_diameter.feet.estimated_diameter_max}ft</p>
                     <p>Miss Distance: {a.close_approach_data[0].miss_distance.astronomical} light years</p>
+                    <Link to={'/asteroid'}>
+                        <button>View Details</button>
+                    </Link>
+                    <p>-------------------------------------------------</p>
                 </div>
             ))}
-        </>
+        </div>
     )
 }
 

@@ -15,6 +15,7 @@ const App = () => {
       </div>
       <Routes>
         <Route path='/' element={<FeedView />} />
+        <Route path='/asteroid' element={<AsteroidView />} />
       </Routes>
     </div>
   );
