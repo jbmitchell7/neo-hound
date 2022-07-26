@@ -1,0 +1,24 @@
+// .asteroid {
+//     display: flex;
+//     flex-direction: row;
+// }
+
+.asteroid-image {
+    max-width: 400px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .asteroid-image {
+        animation: asteroid-slide infinite 5s linear;
+    }
+}
+
+// @keyframes asteroid-slide {
+//     from {
+//         transform: translateX(0%) rotate(0deg);
+//     }
+
+//     to {
+//         transform: translateX(100%) rotate(360deg);
+//     }
+// }

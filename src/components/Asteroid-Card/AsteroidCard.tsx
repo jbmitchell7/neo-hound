@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 import Asteroid from "../../assets/asteroid-image";
 import { Neo } from "../../data/types";
+import './AsteroidCard.scss';
 
 const AsteroidCard = (props: { asteroid: Neo }) => {
     const { asteroid } = props;
 
+    let asteroidWidth = asteroid.estimated_diameter.feet.estimated_diameter_max * .2;
+
     return (
         <div key={asteroid.id} className='asteroid'>
-            <div className='asteroid-image'>
+            <div className='asteroid-image' style={{ width: asteroidWidth + 'px' }}>
                 <Asteroid />
             </div>
             <div>

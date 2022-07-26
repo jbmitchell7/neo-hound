@@ -14,28 +14,3 @@ p {
     align-items: center;
     padding-bottom: 100px;
 }
-
-.asteroid {
-    display: flex;
-    flex-direction: row;
-}
-
-.asteroid-image {
-    max-width: 200px;
-}
-
-// @media (prefers-reduced-motion: no-preference) {
-//     .asteroid-image {
-//         animation: asteroid-spin infinite 20s linear;
-//     }
-// }
-
-// @keyframes asteroid-spin {
-//     from {
-//         transform: rotate(0deg);
-//     }
-
-//     to {
-//         transform: rotate(360deg);
-//     }
-// }
