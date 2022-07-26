@@ -91,6 +91,6 @@ interface OrbitClass {
     orbit_class_range: string
 }
 
-interface Dates {
+export interface Dates {
     [key: string]: Neo[]
 }
