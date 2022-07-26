@@ -1,18 +1,16 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import { fetchGet } from '../../api/nasa-neo';
 import { Feed, Neo } from '../../data/types';
 import './FeedView.scss';
+import AsteroidCard from '../../components/Asteroid-Card/AsteroidCard';
 
 const FeedView = () => {
-    const [asteroidName, setAsteroidName] = useState('asteroid-view');
     const [weeklyAsteroids, setWeeklyAsteroids] = useState<Neo[]>([]);
 
-    const getAsteroid = async (id: string) => {
-        const res: Neo = await fetchGet(`/neo/${id}?`, {});
-        setAsteroidName(res.name);
-    }
+    useEffect(() => {
+        getToday();
+    }, []);
 
     const getToday = async () => {
         /*getting date and converting to string with correct
@@ -28,19 +26,9 @@ const FeedView = () => {
 
     return (
         <div className='feed'>
-            <button onClick={getToday}>Click Me</button>
             <h2>Passing by Today</h2>
             {weeklyAsteroids.map(a => (
-                <div key={a.id}>
-                    <p>{a.name}</p>
-                    <p>Relative Velocity to Earth: {a.close_approach_data[0].relative_velocity.miles_per_hour}mph</p>
-                    <p>Max Estimated Diameter: {a.estimated_diameter.feet.estimated_diameter_max}ft</p>
-                    <p>Miss Distance: {a.close_approach_data[0].miss_distance.astronomical} light years</p>
-                    <Link to={'/asteroid'}>
-                        <button>View Details</button>
-                    </Link>
-                    <p>-------------------------------------------------</p>
-                </div>
+                <AsteroidCard asteroid={a} />
             ))}
         </div>
     )

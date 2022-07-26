@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 744.09 1052.4" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<defs>
+<filter id="a" color-interpolation-filters="sRGB">
+<feGaussianBlur in="SourceGraphic" result="result5" stdDeviation="3"/>
+<feTurbulence baseFrequency="0.02" numOctaves="3" result="result1" type="fractalNoise"/>
+<feDisplacementMap in="SourceGraphic" in2="result1" result="result3" scale="30" xChannelSelector="R" yChannelSelector="G"/>
+<feComposite in="result3" in2="result1" operator="out" result="result4"/>
+<feComposite in2="result4" k1="0.3" k2="1" k3="0.3" operator="arithmetic" result="result6"/>
+<feComposite in="result6" in2="result5"/>
+</filter>
+</defs>
+<path transform="matrix(.51274 0 0 .51274 109.36 257.32)" d="m141.99 707.9c15.644 25.549 264.75 159.82 291.81 132.76 10.71-10.71 58.229-34.176 74.923-34.176 48.468 0 131.15-63.897 165.62-46.663 6.3825 3.1913 60.882-41.816 55.836-36.77-9.8545 9.8545-12.76-72.507 64.436-111.1 71.847-35.923 193.94-329.21 100.55-422.59-9.6838-9.6838 19.408-28.569 12.487-35.49-57.52-57.524-114.56-132.32-180.74-198.49-41.136-41.136-93.345-35.5-191.91-84.782-26.729-13.364-123.42 27.08-125.53 24.974-4.8713-4.8713-133.9-10.692-134.07-10.516-52.79 52.779-159.21 103.99-196.51 141.3-25.633 25.627-7.592 91.05-32.864 116.32-22.804 22.804-57.178 40.424-57.178 84.782 0 30.087-83.488 193.86-46.006 231.34 79.574 79.574 147.65 168.99 199.14 249.09z" fill="#323232" filter="url(#a)" stroke-width="0"/>
+<metadata>
+<rdf:RDF>
+<cc:Work>
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+<dc:publisher>
+<cc:Agent rdf:about="http://openclipart.org/">
+<dc:title>Openclipart</dc:title>
+</cc:Agent>
+</dc:publisher>
+</cc:Work>
+<cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+<cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+</cc:License>
+</rdf:RDF>
+</metadata>
+</svg>
